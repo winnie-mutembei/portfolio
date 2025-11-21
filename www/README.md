@@ -1,10 +1,5 @@
 # Winnie Mutembei Journey Portfolio
 
-![Portfolio hero](assets/img/1.png)
-![Supporting visual](assets/img/2.png)
-
-Live site: [winnermiutembei.web.app](https://winnermiutembei.web.app)
-
 Personal storytelling site for Winnie Mutembei—a Kingdom Bank project manager, BBIT student at Zetech University, and Team Kenya Roll Ball medalist. The site is a lightweight static build focused on narrative chapters (childhood, education, skills, future) with consistent typography, accessible navigation, and subtle reveal animations.
 
 ## Features
@@ -27,10 +22,6 @@ portfolio/
 └─ skills.html
 ```
 
-### Assets
-- `assets/img/1.png` – hero/cover illustration used across pages.
-- `assets/img/2.png` – supporting image for additional visual accents.
-
 ## Getting Started
 1. Clone or download the repository to your machine.
 2. Open any page (e.g., `index.html`) directly in a browser, or run a static-server / Live Server extension for hot reload while editing.
@@ -49,7 +40,4 @@ python3 -m http.server 8080
 
 ## Deployment
 Because the project is static, you can deploy the directory as-is to platforms like GitHub Pages, Netlify Drop, Vercel (static), or any S3-compatible bucket. Ensure asset paths are updated if the hosting root differs from `/Users/nkatha/Documents/Winnie-Zitech/portfolio`.
-
-### Live Site
-- Production build: [winnermiutembei.web.app](https://winnerusmutembei.web.app)
 
