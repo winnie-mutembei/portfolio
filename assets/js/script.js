@@ -35,6 +35,53 @@ if (document.readyState === "loading") {
   initNavHighlight();
 }
 
+const initMobileNav = () => {
+  const nav = document.querySelector(".nav");
+  const navToggle = nav?.querySelector("[data-nav-toggle]");
+  const navMenu = nav?.querySelector("[data-nav-menu]");
+  if (!nav || !navToggle || !navMenu) return;
+
+  const mediaQuery = window.matchMedia ? window.matchMedia("(max-width: 700px)") : null;
+  const shouldCollapseNav = () =>
+    mediaQuery ? mediaQuery.matches : window.innerWidth <= 700;
+
+  const setNavState = (isOpen) => {
+    nav.classList.toggle("nav-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  navToggle.addEventListener("click", () => {
+    setNavState(!nav.classList.contains("nav-open"));
+  });
+
+  navMenu.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target.closest("a") : null;
+    if (target && shouldCollapseNav()) {
+      setNavState(false);
+    }
+  });
+
+  const syncMenuState = () => {
+    if (!shouldCollapseNav()) {
+      setNavState(false);
+    }
+  };
+
+  if (mediaQuery?.addEventListener) {
+    mediaQuery.addEventListener("change", syncMenuState);
+  } else if (mediaQuery?.addListener) {
+    mediaQuery.addListener(syncMenuState);
+  } else {
+    window.addEventListener("resize", syncMenuState);
+  }
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMobileNav, { once: true });
+} else {
+  initMobileNav();
+}
+
 const observerOptions = {
   threshold: 0.25,
 };

@@ -23,7 +23,17 @@
           </svg>
           WM Journey
         </a>
-        <ul class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-links" data-nav-menu>
           <li><a data-nav-link="home" href="index.html">Home</a></li>
           <li><a data-nav-link="childhood" href="childhood.html">Childhood</a></li>
           <li><a data-nav-link="education" href="education.html">Education</a></li>
@@ -101,56 +111,6 @@
             </article>
           </div>
         </div>
-      </section>
-
-      <section data-reveal>
-        <h2>Security Measures</h2>
-        <p>
-          Keeping visitors safe is important. Here are the basic steps I follow:
-        </p>
-        <div class="security-list">
-          <article class="card">
-            <h3>Data Security</h3>
-            <p>
-              Form data travels over HTTPS, is cleaned on the server, and is
-              stored in encrypted databases. I do not run analytics that collect
-              personal info without consent.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Malware Prevention</h3>
-            <p>
-              I rely on GitHub malware scans, signed commits, and manual checks
-              before every deploy.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Regular Updates</h3>
-            <p>
-              I update dependencies monthly and lint the HTML, CSS, and JS to
-              spot issues early.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="grid-two" data-reveal>
-        <article class="card">
-          <h2>Accessibility & Inclusion</h2>
-          <ul>
-            <li>High color contrast and clear focus states.</li>
-            <li>Proper headings, alt text, and skip links.</li>
-            <li>Keyboard-friendly navigation tested in many browsers.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h2>Cross-browser & SEO Practices</h2>
-          <ul>
-            <li>Tested in Chrome, Firefox, Safari, and Edge.</li>
-            <li>Responsive layouts built with CSS grid and flexible type.</li>
-            <li>Clear metadata and headings that help search engines.</li>
-          </ul>
-        </article>
       </section>
 
       <section class="cta" data-reveal>

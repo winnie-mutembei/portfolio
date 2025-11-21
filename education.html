@@ -23,7 +23,17 @@
           </svg>
           WM Journey
         </a>
-        <ul class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-links" data-nav-menu>
           <li><a data-nav-link="home" href="index.html">Home</a></li>
           <li><a data-nav-link="childhood" href="childhood.html">Childhood</a></li>
           <li><a class="active" aria-current="page" data-nav-link="education" href="education.html">Education</a></li>
