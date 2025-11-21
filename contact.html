@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact information, security practices, and accessibility commitments from Winnie Mutembei."
+    />
+    <link rel="stylesheet" href="/Users/nkatha/Documents/Winnie-Zitech/portfolio/assets/css/styles.css" />
+    <title>Contact & Security · Winnie Mutembei</title>
+  </head>
+  <body class="page" data-page="contact">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 24 24" role="img" aria-label="WM monogram">
+            <path
+              fill="currentColor"
+              d="M2 4h4.2l2.8 9.4L12 6.5l3 6.9L17.8 4H22l-5.2 16h-3.4L12 12.8 8.6 20H5.2z"
+            />
+          </svg>
+          WM Journey
+        </a>
+        <ul class="nav-links">
+          <li><a data-nav-link="home" href="index.html">Home</a></li>
+          <li><a data-nav-link="childhood" href="childhood.html">Childhood</a></li>
+          <li><a data-nav-link="education" href="education.html">Education</a></li>
+          <li><a data-nav-link="skills" href="skills.html">Skills</a></li>
+          <li><a data-nav-link="future" href="future.html">Future</a></li>
+          <li><a data-nav-link="contact" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="section" tabindex="-1">
+      <section data-reveal>
+        <p class="pill">Chapter 5</p>
+        <h1>Let’s Stay Connected</h1>
+        <p>
+          I’m always excited to swap stories about skating, product design,
+          education, and Meru community projects. Reach out through the form or
+          via the channels below, and browse the GitHub repo to fork this site.
+        </p>
+      </section>
+
+      <section class="grid-two" data-reveal>
+        <form class="card contact-form" data-contact-form aria-label="Contact form">
+          <h2>Send a Note</h2>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Tell me how our paths can cross..."
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+          <p class="notice" data-form-status hidden></p>
+        </form>
+
+        <div class="card">
+          <h2>Direct Contacts</h2>
+          <div class="contact-info">
+            <article class="contact-card">
+              <h3>Email</h3>
+              <a href="mailto:mutembei.winnie@student.zetech.ac.ke"
+                >mutembei.winnie@student.zetech.ac.ke</a
+              >
+            </article>
+            <article class="contact-card">
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/winnie-mutembei" target="_blank" rel="noopener"
+                >linkedin.com/in/winnie-mutembei</a
+              >
+            </article>
+            <article class="contact-card">
+              <h3>GitHub</h3>
+              <a
+                href="https://github.com/winnie-mutembei/portfolio-site"
+                target="_blank"
+                rel="noopener"
+                >github.com/winnie-mutembei/portfolio-site</a
+              >
+              <p class="footnote">
+                Repository with all source code, issues, and deployment notes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section data-reveal>
+        <h2>Security Measures</h2>
+        <p>
+          Keeping visitors safe is a priority. These are the baseline practices I follow:
+        </p>
+        <div class="security-list">
+          <article class="card">
+            <h3>Data Security</h3>
+            <p>
+              Form data is transmitted over HTTPS, sanitized on the server, and
+              stored in encrypted databases. No analytics scripts capture
+              personally identifiable information without consent.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Malware Prevention</h3>
+            <p>
+              I rely on GitHub’s automated malware scanning, signed commits, and
+              manual integrity checks before every deploy.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Regular Updates</h3>
+            <p>
+              Dependencies are updated monthly, and core HTML/CSS/JS files are
+              linted via continuous integration to catch regressions early.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid-two" data-reveal>
+        <article class="card">
+          <h2>Accessibility & Inclusion</h2>
+          <ul>
+            <li>WCAG-compliant color contrast and focus states.</li>
+            <li>Semantic landmarks, alt text, and skip links.</li>
+            <li>Keyboard-friendly navigation verified in multiple browsers.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Cross-browser & SEO Practices</h2>
+          <ul>
+            <li>Tested in Chrome, Firefox, Safari, and Edge.</li>
+            <li>Responsive layouts using CSS grid and flexible typography.</li>
+            <li>Structured metadata and descriptive headings for SEO.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cta" data-reveal>
+        <h2>Stay Updated</h2>
+        <p>
+          I publish iteration notes and changelogs on the GitHub repository,
+          including security advisories, new features, and performance audits.
+        </p>
+      </section>
+    </main>
+    <footer>
+      © <span data-year></span> Winnie Mutembei · Contact & safety
+    </footer>
+    <script src="/Users/nkatha/Documents/Winnie-Zitech/portfolio/assets/js/script.js" defer></script>
+  </body>
+</html>
+
