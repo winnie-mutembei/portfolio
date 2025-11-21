@@ -1,13 +1,39 @@
 const navLinks = document.querySelectorAll("[data-nav-link]");
-const currentPage = document.body.dataset.page;
 
-navLinks.forEach((link) => {
-  if (link.dataset.navLink === currentPage) {
-    link.classList.add("active");
-  } else {
-    link.classList.remove("active");
+const highlightActiveNav = (target) => {
+  navLinks.forEach((link) => link.classList.remove("active"));
+  const match = [...navLinks].find(
+    (link) => link.dataset.navLink === target
+  );
+  if (match) {
+    match.classList.add("active");
   }
-});
+};
+
+const resolvePageFromPath = () => {
+  const bodyPage = document.body.dataset.page;
+  if (bodyPage) return bodyPage;
+
+  const pathname = window.location.pathname;
+  if (pathname === "/" || pathname.endsWith("index.html")) return "home";
+  const slug = pathname.split("/").pop()?.replace(".html", "");
+  return slug || "home";
+};
+
+const initNavHighlight = () => {
+  highlightActiveNav(resolvePageFromPath());
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      highlightActiveNav(link.dataset.navLink);
+    });
+  });
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavHighlight, { once: true });
+} else {
+  initNavHighlight();
+}
 
 const observerOptions = {
   threshold: 0.25,
